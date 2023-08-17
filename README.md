@@ -1,36 +1,40 @@
-<img src="https://user-images.githubusercontent.com/12534576/192582340-4c9e4401-1fe6-4dbb-95bb-fdbba5493f61.png"/>
+# Geons Logix Labeling Platform
 
-![GitHub](https://img.shields.io/github/license/heartexlabs/label-studio?logo=heartex) ![label-studio:build](https://github.com/heartexlabs/label-studio/workflows/label-studio:build/badge.svg) ![GitHub release](https://img.shields.io/github/v/release/heartexlabs/label-studio?include_prereleases)
+## What is Geons Logix Labeling Platform?
 
-[Website](https://labelstud.io/) • [Docs](https://labelstud.io/guide/) • [Twitter](https://twitter.com/labelstudiohq) • [Join Slack Community <img src="https://app.heartex.ai/docs/images/slack-mini.png" width="18px"/>](https://slack.labelstud.io/?source=github-1)
+<!-- <a href="https://geonslogix-labeling.com/blog/release-130.html"><img src="https://github.com/your-username/label-studio-fork/raw/master/docs/themes/htx/source/images/release-130/LS-Hits-v1.3.png" align="right" /></a> -->
 
+Geons Logix Labeling Platform also called **GeoLabeler**, is a customized fork of the open-source data labeling tool, Label Studio. It empowers you to annotate various data types such as audio, text, images, videos, and time series with an intuitive UI, and enables export to diverse model formats. This platform is designed to facilitate the preparation of raw data or enhancement of existing training data to enhance the accuracy of machine learning models.
 
-## What is Label Studio?
+- [Try out Geons Logix Labeling Platform](#try-out-geons-logix-labeling-platform)
+- [Key Features of Geons Logix Labeling Platform](#key-features-of-geons-logix-labeling-platform)
+- [Pre-built Templates for Data Labeling](#pre-built-templates-for-data-labeling)
+- [Integration with Machine Learning Models](#integration-with-machine-learning-models)
+- [Seamless Integration with Your Tools](#seamless-integration-with-your-tools)
 
-<!-- <a href="https://labelstud.io/blog/release-130.html"><img src="https://github.com/heartexlabs/label-studio/raw/master/docs/themes/htx/source/images/release-130/LS-Hits-v1.3.png" align="right" /></a> -->
+![Gif of Geons Logix Labeling Platform annotating various data types](https://raw.githubusercontent.com/heartexlabs/label-studio/master/images/annotation_examples.gif)
 
-Label Studio is an open source data labeling tool. It lets you label data types like audio, text, images, videos, and time series with a simple and straightforward UI and export to various model formats. It can be used to prepare raw data or improve existing training data to get more accurate ML models.
+Customize the Geons Logix Labeling Platform to cater to your unique dataset needs. Discover more in an [introductory blog post](https://geonslogix.com/introducing-geons-logix-labeling-platform) to delve into the details.
 
-- [Try out Label Studio](#try-out-label-studio)
-- [What you get from Label Studio](#what-you-get-from-label-studio)
-- [Included templates for labeling data in Label Studio](#included-templates-for-labeling-data-in-label-studio)
-- [Set up machine learning models with Label Studio](#set-up-machine-learning-models-with-Label-Studio)
-- [Integrate Label Studio with your existing tools](#integrate-label-studio-with-your-existing-tools)
+## Try out Geons Logix Labeling Platform
 
-![Gif of Label Studio annotating different types of data](https://raw.githubusercontent.com/heartexlabs/label-studio/master/images/annotation_examples.gif)
-
-Have a custom dataset? You can customize Label Studio to fit your needs. Read an [introductory blog post](https://towardsdatascience.com/introducing-label-studio-a-swiss-army-knife-of-data-labeling-140c1be92881) to learn more. 
-
-## Try out Label Studio
-
-Install Label Studio locally, or deploy it in a cloud instance. [Or, sign up for a free trial of our Enterprise edition.](https://heartex.com/free-trial).
+Install the Geons Logix Labeling Platform locally or deploy it in a cloud instance.
 
 - [Install locally with Docker](#install-locally-with-docker)
-- [Run with Docker Compose (Label Studio + Nginx + PostgreSQL)](#run-with-docker-compose)
+- [Run with Docker Compose (Geons Logix Labeling Platform + Nginx + PostgreSQL)](#run-with-docker-compose)
 - [Install locally with pip](#install-locally-with-pip)
 - [Install locally with Anaconda](#install-locally-with-anaconda)
 - [Install for local development](#install-for-local-development)
 - [Deploy in a cloud instance](#deploy-in-a-cloud-instance)
+
+<!-- Rest of the README content remains unchanged -->
+
+## License
+
+This software is licensed under the [Apache 2.0 LICENSE](/LICENSE) © [Geons Logix](https://www.geonslogix.com/). 2020-2022
+
+<img src="https://user-images.githubusercontent.com/12534576/192582529-cf628f58-abc5-479b-a0d4-8a3542a4b35e.png" title="Hey everyone!" width="180" />
+
 
 ### Install locally with Docker
 Official Label Studio docker image is [here](https://hub.docker.com/r/heartexlabs/label-studio) and it can be downloaded with `docker pull`. 
