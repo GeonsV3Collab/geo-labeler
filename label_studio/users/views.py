@@ -1,5 +1,6 @@
 """This file and its contents are licensed under the Apache License 2.0. Please see the included NOTICE for copyright information and LICENSE for a copy of the license.
 """
+import os
 import logging
 from time import time
 
@@ -20,6 +21,8 @@ from users.functions import proceed_registration
 from organizations.models import Organization
 from organizations.forms import OrganizationSignupForm
 
+
+APPROVED_EMAIL_DOMAINS = os.environ.get('APPROVED_EMAIL_DOMAINS', '').split(',')
 
 logger = logging.getLogger()
 
@@ -67,9 +70,14 @@ def user_signup(request):
         organization_form = OrganizationSignupForm(request.POST)
 
         if user_form.is_valid():
-            redirect_response = proceed_registration(request, user_form, organization_form, next_page)
-            if redirect_response:
-                return redirect_response
+            # Check if the user's email domain is in the approved list
+            user_email_domain = user_form.cleaned_data['email'].split('@')[1]
+            if user_email_domain not in APPROVED_EMAIL_DOMAINS:
+                user_form.add_error('email', 'Email domain not approved for registration.')
+            else:
+                redirect_response = proceed_registration(request, user_form, organization_form, next_page)
+                if redirect_response:
+                    return redirect_response
 
     return render(request, 'users/user_signup.html', {
         'user_form': user_form,
